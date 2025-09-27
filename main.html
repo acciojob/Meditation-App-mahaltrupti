@@ -8,49 +8,25 @@
 
 <body>
 	<!-- the entire body must be written by student -->
-	<body class="bg-gray-800 text-white">
+	<div class="vid-container">
+        <video id="meditation-video" autoplay loop>
+            <source src="video/beach.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
 
-    <div id="app" class="relative">
-
-        <!-- Video Container -->
-        <div class="vid-container">
-            <video id="video-source" class="w-full h-full object-cover" loop preload="auto">
-                <source src="https://media.w3.org/2010/05/sintel/trailer_hd.mp4" type="video/mp4">
-            </video>
+    <div class="player-container">
+        <div class="sound-picker">
+            <button id="beach-sound">Beach Sound</button>
+            <button id="rain-sound">Rain Sound</button>
         </div>
-
-        <!-- Player Container -->
-        <div class="player-container z-10 p-6 rounded-2xl flex flex-col items-center justify-center gap-6">
-
-            <div class="sound-picker flex justify-center gap-4">
-                <button id="beach-button" class="bg-gray-700 hover:bg-blue-500 text-white py-2 px-6 rounded-full font-semibold transition-all duration-200">Beach</button>
-                <button id="rain-button" class="bg-gray-700 hover:bg-blue-500 text-white py-2 px-6 rounded-full font-semibold transition-all duration-200">Rain</button>
-            </div>
-
-            <div class="time-select flex justify-center gap-4" id="time-select">
-                <button id="smaller-mins" class="bg-gray-700 hover:bg-blue-500 text-white py-2 px-6 rounded-full font-semibold transition-all duration-200">2 Mins</button>
-                <button id="medium-mins" class="bg-gray-700 hover:bg-blue-500 text-white py-2 px-6 rounded-full font-semibold transition-all duration-200">5 Mins</button>
-                <button id="long-mins" class="bg-gray-700 hover:bg-blue-500 text-white py-2 px-6 rounded-full font-semibold transition-all duration-200 active">10 Mins</button>
-            </div>
-
-            <div class="time-display text-6xl font-extrabold text-white">10:00</div>
-
-            <div class="play-button-container flex justify-center">
-                <button class="play" aria-label="Play/Pause">
-                    <svg id="play-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-16 h-16 text-white transition-transform duration-200">
-                        <path fill="currentColor" d="M8 5.14v13.72a1 1 0 0 0 1.5.86l10.8-6.86a1 1 0 0 0 0-1.72L9.5 4.28a1 1 0 0 0-1.5.86z"/>
-                    </svg>
-                    <svg id="pause-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-16 h-16 text-white transition-transform duration-200 hidden">
-                        <path fill="currentColor" d="M6 4.5h3v15h-3zM15 4.5h3v15h-3z"/>
-                    </svg>
-                </button>
-            </div>
-            
-            <audio id="sound-source" preload="auto">
-                <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
-            </audio>
-
+        <div id="time-select">
+            <button id="smaller-mins">2 Min</button>
+            <button id="medium-mins">5 Min</button>
+            <button id="long-mins">10 Min</button>
         </div>
+        <div class="time-display">10:0</div>
+        <button class="play">Play/Pause</button>
     </div>
     <script type="text/javascript" src="./script.js">
 </script>
