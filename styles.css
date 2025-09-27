@@ -1,103 +1,64 @@
 /*  your css code here. If applicable */
-:root {
-            --primary-color: #4a5568;
-            --secondary-color: #a0aec0;
-            --accent-color: #63b3ed;
-            --bg-color: #2d3748;
-        }
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--bg-color);
-            color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            overflow: hidden;
-        }
-        #app {
-            position: relative;
-            width: 100%;
-            max-width: 600px;
-            height: 80vh;
-            max-height: 800px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            border-radius: 1rem;
-            overflow: hidden;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
-        }
-        .vid-container {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 1;
-        }
-        .vid-container video {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        .player-container {
-            position: relative;
-            z-index: 2;
-            width: 90%;
-            max-width: 400px;
-            background: rgba(0, 0, 0, 0.4);
-            backdrop-filter: blur(10px);
-            border-radius: 1rem;
-            padding: 1.5rem;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 1.5rem;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-        .sound-picker, .time-select {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-        }
-        .sound-picker button, .time-select button {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 0.75rem 1.5rem;
-            border-radius: 9999px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.2s ease-in-out;
-            border: none;
-        }
-        .sound-picker button:hover, .time-select button:hover {
-            background-color: var(--accent-color);
-            transform: translateY(-2px);
-        }
-        .sound-picker button.active, .time-select button.active {
-            background-color: var(--accent-color);
-            transform: scale(1.05);
-            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-        }
-        .play {
-            background: none;
-            border: none;
-            cursor: pointer;
-            transition: transform 0.2s ease-in-out;
-        }
-        .play:hover {
-            transform: scale(1.1);
-        }
-        .play svg {
-            width: 64px;
-            height: 64px;
-            color: white;
-        }
-        .time-display {
-            font-size: 3rem;
-            font-weight: 700;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
-        }
+/* Reset default margins and paddings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #1f2937; /* Tailwind's gray-800 */
+  color: white;
+  overflow: hidden;
+}
+
+#app {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.vid-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.player-container {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  padding: 1rem;
+  border-radius: 1rem;
+  z-index: 10;
+}
+
+.time-display {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.play svg {
+  cursor: pointer;
+}
+
+button:focus {
+  outline: none;
+}
