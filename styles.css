@@ -1,46 +1,5 @@
 /*  your css code here. If applicable */
 /* Reset default margins and paddings */
-It looks like you have a detailed project to work on for a meditation app. Let’s break this down step by step to help you get started.
-
-Step 1: Setting Up the HTML Structure
-You need to create the basic structure of your HTML file. Here’s how you can outline it:
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meditation App</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
-</head>
-<body id="app">
-
-    <div class="vid-container">
-        <video id="meditation-video" autoplay loop>
-            <source src="video/beach.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-    </div>
-
-    <div class="player-container">
-        <div class="sound-picker">
-            <button id="beach-sound">Beach Sound</button>
-            <button id="rain-sound">Rain Sound</button>
-        </div>
-        <div id="time-select">
-            <button id="smaller-mins">2 Min</button>
-            <button id="medium-mins">5 Min</button>
-            <button id="long-mins">10 Min</button>
-        </div>
-        <div class="time-display">10:0</div>
-        <button class="play">Play/Pause</button>
-    </div>
-
-    <script src="script.js"></script> <!-- Link to your JavaScript file -->
-</body>
-</html>
-Step 2: CSS for Styling
-You can add basic styles in your CSS file. For example:
 
 body {
     display: flex;
